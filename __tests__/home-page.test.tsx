@@ -1,8 +1,7 @@
-import HomePage from "@/app/(home)/page";
+import HomePage from "@/app/(pages)/(home)/page";
+import { render } from "@/tests/util/test-utils";
 
 import "@/tests/util/match-media.mock";
-
-import { render } from "@/tests/util/test-utils";
 
 describe("Page", () => {
   it("renders home page", () => {
