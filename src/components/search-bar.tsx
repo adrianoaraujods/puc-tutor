@@ -2,11 +2,13 @@
 
 import * as React from "react";
 
-import { cn } from "@/lib/utils";
-import { Text } from "@/components/typography/text";
-import { Button } from "@/components/ui/button";
+import {
+  LargeSearchToggle,
+  SearchToggle,
+} from "fumadocs-ui/components/layout/search-toggle";
 
-import { SearchIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export function SearchBar({
   className,
@@ -16,20 +18,16 @@ export function SearchBar({
   return (
     <>
       <Button
-        className={cn(
-          "bg-muted w-48 justify-between gap-4 max-md:hidden",
-          className
-        )}
+        className={cn("max-md:hidden", className)}
         variant={variant}
         {...props}
+        asChild
       >
-        <Text className="text-muted-foreground">Pesquisar...</Text>
-
-        <SearchIcon />
+        <LargeSearchToggle />
       </Button>
 
-      <Button className="md:hidden" size="icon" variant="ghost">
-        <SearchIcon className="size-6" />
+      <Button className="md:hidden" size="icon" variant="ghost" asChild>
+        <SearchToggle />
       </Button>
     </>
   );

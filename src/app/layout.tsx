@@ -1,6 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
+import { RootProvider } from "fumadocs-ui/provider";
 import { ThemeProvider } from "next-themes";
+
+import { translations } from "@/app/content/[[...slug]]/docs.config";
 
 import "@/styles/globals.css";
 
@@ -22,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden font-sans antialiased [--navbar-height:calc(theme(spacing.14))]`}
       >
         <ThemeProvider
           attribute="class"
@@ -30,7 +33,9 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          {children}
+          <RootProvider i18n={{ locale: "pt-BR", translations }}>
+            {children}
+          </RootProvider>
         </ThemeProvider>
       </body>
     </html>

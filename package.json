@@ -3,6 +3,7 @@
   "version": "0.1.15",
   "private": true,
   "scripts": {
+    "postinstall": "fumadocs-mdx",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -21,6 +22,9 @@
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fumadocs-core": "^15.5.0",
+    "fumadocs-mdx": "^11.6.6",
+    "fumadocs-ui": "^15.5.0",
     "lucide-react": "^0.482.0",
     "motion": "^12.15.0",
     "motion-plus": "^0.1.9",

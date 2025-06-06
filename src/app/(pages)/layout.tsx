@@ -8,7 +8,7 @@ export default function PagesLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col [--navbar-height:calc(theme(spacing.14))]">
+    <div className="flex min-h-screen flex-col">
       <AppNavbar />
 
       <main className="grow">

@@ -2,6 +2,8 @@
 
 import * as React from "react";
 
+import { useSearchContext } from "fumadocs-ui/provider";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -12,6 +14,7 @@ export function SearchPromptExample({ prompts }: { prompts: string[] }) {
   const [currentPromptIndex, setCurrentPromptIndex] = React.useState(0);
   const [currentCharIndex, setCurrentCharIndex] = React.useState(0);
   const [isTyping, setIsTyping] = React.useState(true);
+  const { setOpenSearch } = useSearchContext();
 
   // Controls the typing speed
   const typingSpeed = 50; // milliseconds per character
@@ -64,7 +67,7 @@ export function SearchPromptExample({ prompts }: { prompts: string[] }) {
         {/* Outer glow effect */}
         <div className="from-primary/30 to-primary/30 absolute -inset-0.5 rounded-xl bg-gradient-to-r opacity-75 blur transition duration-1000 group-hover:opacity-100" />
 
-        <div className="relative">
+        <div className="relative" onClick={() => setOpenSearch(true)}>
           <Input
             className="!border-primary/10 cursor-pointer rounded-xl border-2 py-6 pr-20 !text-lg text-ellipsis shadow-[0_4px_20px_rgba(36,101,237,0.2)] backdrop-blur-md focus-visible:ring-0 focus-visible:ring-offset-0"
             value={displayText}
