@@ -6,14 +6,13 @@ import { usePathname } from "next/navigation";
 
 import { GITHUB_URL, NAVIGATION_LINKS } from "@/lib/config";
 import { cn } from "@/lib/utils";
-import { GithubIcon } from "@/components/icon/github";
+import { GithubIcon } from "@/components/icon/github-icon";
+import { PUCTutorIcon } from "@/components/icon/puc-tutor-icon";
 import { Section } from "@/components/layout/section";
 import { SearchBar } from "@/components/search-bar";
 import { ThemesDropdown } from "@/components/themes-dropdown";
 import { Text } from "@/components/typography/text";
 import { Button } from "@/components/ui/button";
-
-import { HandHelpingIcon } from "lucide-react";
 
 export function AppNavbar({
   className,
@@ -33,9 +32,10 @@ export function AppNavbar({
       <Section className="flex h-[var(--navbar-height)] w-full items-center justify-between gap-2 py-0 pr-4">
         <div className="flex items-center gap-8">
           <Link className="flex items-center justify-between gap-2" href="/">
-            <HandHelpingIcon />
+            <PUCTutorIcon className="h-8" />
+            {/* <HandHelpingIcon />
 
-            <Text>PUC Tutor</Text>
+            <Text>PUC Tutor</Text> */}
           </Link>
 
           <nav className="max-md:hidden">
