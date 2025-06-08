@@ -7,6 +7,11 @@ import { translations } from "@/app/content/[[...slug]]/docs.config";
 
 import "@/styles/globals.css";
 
+import faviconDark from "@/public/assets/icons/icon-dark.svg";
+import faviconLight from "@/public/assets/icons/icon-light.svg";
+
+import type { Metadata } from "next";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,3 +46,12 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: faviconDark.src, media: "(prefers-color-scheme: dark)" },
+      { url: faviconLight.src, media: "(prefers-color-scheme: light)" },
+    ],
+  },
+};

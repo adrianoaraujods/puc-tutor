@@ -61,7 +61,7 @@ export async function generateMetadata(props: {
   if (!page) notFound();
 
   return {
-    title: page.data.title,
+    title: `${page.data.title} | PUC Tutor`,
     description: page.data.description,
   };
 }
