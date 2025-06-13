@@ -8,7 +8,7 @@ import {
   DocsTitle,
 } from "fumadocs-ui/page";
 
-import { GITHUB_OWNER, GITHUB_REPO } from "@/lib/config";
+import { GITHUB_CONTENT, GITHUB_OWNER, GITHUB_REPO } from "@/lib/config";
 import { source } from "@/lib/source";
 import { getMDXComponents } from "@/components/typography/mdx-components";
 
@@ -30,7 +30,7 @@ export default async function Page(props: {
         owner: GITHUB_OWNER,
         repo: GITHUB_REPO,
         sha: "master",
-        path: "public",
+        path: `${GITHUB_CONTENT}/${page.file.path}`,
       }}
       tableOfContentPopover={{
         style: "clerk",
