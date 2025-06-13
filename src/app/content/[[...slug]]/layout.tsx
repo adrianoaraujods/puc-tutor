@@ -1,6 +1,6 @@
 import { DocsLayout as PrimitiveDocsLayout } from "fumadocs-ui/layouts/docs";
 
-import { docsConfig } from "@/app/content/[[...slug]]/docs.config";
+import { docsConfig } from "@/components/docs.config";
 import { BackgroundPattern } from "@/components/layout/background-pattern";
 
 import type { ReactNode } from "react";

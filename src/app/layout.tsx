@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { RootProvider } from "fumadocs-ui/provider";
 import { ThemeProvider } from "next-themes";
 
-import { translations } from "@/app/content/[[...slug]]/docs.config";
+import { translations } from "@/components/docs.config";
 
 import "@/styles/globals.css";
 
