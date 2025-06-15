@@ -1,9 +1,9 @@
 import { defineConfig, defineDocs } from "fumadocs-mdx/config";
 
-import { GITHUB_CONTENT } from "@/lib/config";
+import { CONTENT_PATH } from "@/lib/config";
 
-export const docs = defineDocs({
-  dir: GITHUB_CONTENT,
+export const content = defineDocs({
+  dir: CONTENT_PATH,
 });
 
-export default defineConfig();
+export default defineConfig({ lastModifiedTime: "git" });
