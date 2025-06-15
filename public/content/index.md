@@ -1,4 +1,4 @@
 ---
-title: Bem-vindo ao PUC Tutor!
+title: Começe por Aqui!
 icon: Album
 ---
