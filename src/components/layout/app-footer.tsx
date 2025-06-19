@@ -58,7 +58,7 @@ export function AppFooter({
                   <Link href="/content/campus">Campus</Link>
                 </li>
                 <li>
-                  <Link href="/content/materias">Matérias</Link>
+                  <Link href="/content/disciplinas">Disciplinas</Link>
                 </li>
               </ul>
             </div>
