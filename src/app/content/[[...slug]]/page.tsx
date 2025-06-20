@@ -28,7 +28,9 @@ export default async function Page(props: {
 
   return (
     <DocsPage
-      container={{ className: "-mt-[var(--navbar-height)]" }}
+      article={{ className: "!h-fit" }}
+      tableOfContent={{ style: "clerk" }}
+      tableOfContentPopover={{ style: "clerk" }}
       toc={page.data.toc}
       full={page.data.full}
       editOnGithub={{
@@ -42,8 +44,6 @@ export default async function Page(props: {
           ? undefined
           : page.data.lastModified
       }
-      tableOfContent={{ style: "clerk" }}
-      tableOfContentPopover={{ style: "clerk" }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
